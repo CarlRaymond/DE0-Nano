@@ -65,5 +65,6 @@
 */*_sim/
 incremental_db/
 db/
+greybox_tmp/
 output_files/
 PLLJ_PLLSPE_INFO.txt
