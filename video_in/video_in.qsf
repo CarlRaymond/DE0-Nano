@@ -18,14 +18,14 @@
 #
 # Quartus Prime
 # Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-# Date created = 15:24:45  October 28, 2018
+# Date created = 21:32:12  October 29, 2018
 #
 # -------------------------------------------------------------------------- #
 #
 # Notes:
 #
 # 1) The default values for assignments are stored in the file:
-#		pwm_assignment_defaults.qdf
+#		video_in_assignment_defaults.qdf
 #    If this file doesn't exist, see file:
 #		assignment_defaults.qdf
 #
@@ -38,33 +38,16 @@
 
 set_global_assignment -name FAMILY "Cyclone IV E"
 set_global_assignment -name DEVICE EP4CE22F17C6
-set_global_assignment -name TOP_LEVEL_ENTITY pwm
+set_global_assignment -name TOP_LEVEL_ENTITY video_in
 set_global_assignment -name ORIGINAL_QUARTUS_VERSION 18.1.0
-set_global_assignment -name PROJECT_CREATION_TIME_DATE "15:24:45  OCTOBER 28, 2018"
+set_global_assignment -name PROJECT_CREATION_TIME_DATE "21:32:12  OCTOBER 29, 2018"
 set_global_assignment -name LAST_QUARTUS_VERSION "18.1.0 Lite Edition"
 set_global_assignment -name PROJECT_OUTPUT_DIRECTORY output_files
-set_global_assignment -name QIP_FILE pll.qip
-set_global_assignment -name VERILOG_FILE simple_pwm.v
-set_global_assignment -name VERILOG_FILE fancy_pwm.v
-set_global_assignment -name BDF_FILE pwm.bdf
+set_global_assignment -name QIP_FILE pll/synthesis/pll.qip
 set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
 set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
 set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
-set_global_assignment -name VERILOG_FILE up_down.v
+set_global_assignment -name BDF_FILE video_in.bdf
 set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
 set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
-set_location_assignment PIN_J15 -to KEY[0]
-set_location_assignment PIN_R8 -to clock_50
-set_location_assignment PIN_A13 -to LED[1]
-set_location_assignment PIN_A15 -to LED[0]
-set_global_assignment -name ENABLE_OCT_DONE OFF
-set_global_assignment -name USE_CONFIGURATION_DEVICE OFF
-set_global_assignment -name CRC_ERROR_OPEN_DRAIN OFF
-set_global_assignment -name RESERVE_ALL_UNUSED_PINS_WEAK_PULLUP "AS INPUT TRI-STATED"
-set_global_assignment -name OUTPUT_IO_TIMING_NEAR_END_VMEAS "HALF VCCIO" -rise
-set_global_assignment -name OUTPUT_IO_TIMING_NEAR_END_VMEAS "HALF VCCIO" -fall
-set_global_assignment -name OUTPUT_IO_TIMING_FAR_END_VMEAS "HALF SIGNAL SWING" -rise
-set_global_assignment -name OUTPUT_IO_TIMING_FAR_END_VMEAS "HALF SIGNAL SWING" -fall
-set_location_assignment PIN_D3 -to GPIO_00
-set_location_assignment PIN_B12 -to GPIO_33
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

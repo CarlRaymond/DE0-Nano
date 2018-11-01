@@ -1,0 +1,22 @@
+# system info pll on 2018.10.29.21:36:04
+system_info:
+name,value
+DEVICE,EP4CE22F17C6
+DEVICE_FAMILY,Cyclone IV E
+GENERATION_ID,1540863360
+#
+#
+# Files generated for pll on 2018.10.29.21:36:04
+files:
+filepath,kind,attributes,module,is_top
+simulation/pll.v,VERILOG,,pll,true
+simulation/submodules/pll_video_pll_0.v,VERILOG,,pll_video_pll_0,false
+simulation/submodules/altera_up_altpll.v,VERILOG,,altera_up_altpll,false
+simulation/submodules/altera_up_avalon_reset_from_locked_signal.v,VERILOG,,altera_up_avalon_reset_from_locked_signal,false
+#
+# Map from instance-path to kind of module
+instances:
+instancePath,module
+pll.video_pll_0,pll_video_pll_0
+pll.video_pll_0.video_pll,altera_up_altpll
+pll.video_pll_0.reset_from_locked,altera_up_avalon_reset_from_locked_signal

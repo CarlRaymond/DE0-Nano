@@ -1,11 +1,10 @@
 module up_down(input clock, input reset, output wire [7:0] out);
 
 	// 16-bit counter
-	reg [15:0] counter;
+	reg [15:0] counter = 16'd0;
 	
-
 	// Direction bit: 1 = count up; 0 = count down.
-	reg direction;
+	reg direction = 1;
 	
 	assign out[7:0] = counter[15:8];
 	
